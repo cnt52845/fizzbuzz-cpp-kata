@@ -10,9 +10,13 @@ find_package(GTest)
 
 add_executable(fizzbuzz fizzbuzz.cpp)
 
-add_executable(test_something test_something.cpp)
-add_test(test_something test_something)
-target_link_libraries(test_something PRIVATE GTest::gmock GTest::gmock_main)
+file(GLOB tests "${PROJECT_SOURCE_DIR}/test_*.cpp")
+foreach(test ${tests})
+    get_filename_component(name ${test} NAME_WE)
+    add_executable(${name} ${test})
+    add_test(${name} ${name})
+    target_link_libraries(${name} PRIVATE GTest::gmock GTest::gmock_main)
+endforeach()
 
 add_custom_target(  
     copy-compile-commands ALL

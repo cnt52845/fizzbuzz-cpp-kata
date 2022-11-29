@@ -52,6 +52,12 @@ handle all dependencies automatically.
 make
 ```
 
+### Run main
+
+```console
+make run
+```
+
 ### Run tests
 
 ```console

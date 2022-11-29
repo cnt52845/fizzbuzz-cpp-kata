@@ -7,6 +7,10 @@ build:
 	CXX=clang++ cmake -B ${BUILDDIR} -G Ninja .
 	cmake --build ${BUILDDIR}
 
+.PHONY: run
+run:
+	@${BUILDDIR}/fizzbuzz
+
 .PHONY: test
 test:
 	GTEST_COLOR=1 ctest --output-on-failure --test-dir ${BUILDDIR}

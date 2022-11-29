@@ -8,6 +8,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(GTest)
 
+add_executable(fizzbuzz fizzbuzz.cpp)
+
 add_executable(test_something test_something.cpp)
 add_test(test_something test_something)
 target_link_libraries(test_something PRIVATE GTest::gmock GTest::gmock_main)

@@ -14,7 +14,15 @@ From Wikipedia:
 
 ## Instructions
 
+### Canonical version
+
 Write a program to print the first 100 FizzBuzz numbers, separated by newlines:
+  * if a number is divisible by three, replace it with "Fizz";
+  * if a number is divisible by five, replace it with "Buzz";
+  * numbers divisible by both three and five become "FizzBuzz".
+
+#### Sample output
+
 ```
 1
 2
@@ -33,6 +41,42 @@ Fizz
 FizzBuzz
 16
 ...
+```
+
+### Advanced version
+
+> **Note**
+>
+> We recommend to always start with the canonical version, and only once you
+> have it working proceed to the advanced version. This helps to model
+> situations in production when we don't know all the requirements when a
+> project starts.
+
+Follow the same rules as the canonical version with these additional rules:
+  * if a number is divisible by seven, replace it with "Fuzz";
+  * if a number is divisible by 11, replace it with "Jazz";
+  * if a number is divisible by any combination of 3, 5, 7, or 11, replace it with
+    concatenated values corresponding to each divisor: e.g., 55 becomes "BuzzJazz".
+
+#### Sample output
+
+```
+...
+86
+Fizz
+Jazz
+89
+FizzBuzz
+Fuzz
+92
+Fizz
+94
+Buzz
+Fizz
+97
+Fuzz
+FizzJazz
+Buzz
 ```
 
 ## Usage

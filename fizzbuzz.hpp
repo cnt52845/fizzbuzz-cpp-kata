@@ -2,13 +2,17 @@
 #define FIZZBUZZ_HPP_
 
 std::string fizzbuzz(int number) {
+  std::string result;
   if (0 == number % 3) {
-    return "Fizz";
+    result += "Fizz";
   }
   if (0 == number % 5) {
-    return "Buzz";
+    result += "Buzz";
   }
-  return std::to_string(number);  
+  if (result.empty()) {
+    return std::to_string(number);  
+  }
+  return result;
 }
 
 #endif

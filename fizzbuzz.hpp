@@ -2,7 +2,7 @@
 #define FIZZBUZZ_HPP_
 
 std::string fizzbuzz(int number) {
-  return "1";  
+  return std::to_string(number);  
 }
 
 #endif

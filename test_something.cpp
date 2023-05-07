@@ -15,3 +15,7 @@ TEST(fizzbuzz, TwoReturnsTwo) {
 TEST(fizzbuzz, ThreeReturnsFizz) {
   EXPECT_EQ("Fizz", fizzbuzz(3));
 }
+
+TEST(fizzbuzz, FiveReturnsBuzz) {
+  EXPECT_EQ("Buzz", fizzbuzz(5));
+}

@@ -1,8 +1,11 @@
 #include <iostream>
+#include "fizzbuzz.hpp"
 
-int
-main()
+int main()
 {
-    std::cout << "Hello World!\n";
+    FizzBuzz fizzbuzz;
+    for (int i = 1; i <= 100; i++) {
+        std::cout << fizzbuzz(i) << std::endl;
+    }
     return 0;
 }

@@ -16,10 +16,10 @@ std::string checkResult(int number, const std::string& result) {
 std::string fizzbuzz(int number) {
   std::string result;
   result += checkFizz(number);
+  result += checkBuzz(number);
   if (0 == number % 7) {
     result += "Fuzz";
   }
-  result += checkBuzz(number);
   return checkResult(number, result);
 }
 

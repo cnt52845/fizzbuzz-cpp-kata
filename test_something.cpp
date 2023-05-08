@@ -44,3 +44,12 @@ TEST_F(FizzBuzzTest, ThirtyFiveReturnsBuzzFuzz) {
 TEST_F(FizzBuzzTest, HundredOFiveReturnsFizzBuzzFuzz) {
   EXPECT_EQ("FizzBuzzFuzz", fizzbuzz(105));
 }
+
+TEST_F(FizzBuzzTest, ClassInstanceCanBeReusedMultipleTimes) {
+  EXPECT_EQ("1", fizzbuzz(1));
+  EXPECT_EQ("2", fizzbuzz(2));
+  EXPECT_EQ("Fizz", fizzbuzz(3));
+  EXPECT_EQ("Buzz", fizzbuzz(5));
+  EXPECT_EQ("Fuzz", fizzbuzz(7));
+  EXPECT_EQ("FizzBuzzFuzz", fizzbuzz(105));
+}

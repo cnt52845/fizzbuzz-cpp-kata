@@ -15,6 +15,9 @@ std::string checkResult(int number, const std::string& result) {
 
 std::string fizzbuzz(int number) {
   std::string result;
+  if (0 == number % 7) {
+    return "Fuzz";
+  }
   result += checkFizz(number);
   result += checkBuzz(number);
   return checkResult(number, result);

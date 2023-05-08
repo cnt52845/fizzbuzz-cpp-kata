@@ -4,16 +4,24 @@
 class FizzBuzz {
  public:
   std::string operator()(int number) {
-    FizzBuzz::number = number;
-    result.clear();
-    checkFizz();
-    checkBuzz();
-    checkFuzz();
-    checkResult();
+    init(number);
+    calculate();
     return result;
   }
 
  private:
+  void init(int number) {
+    FizzBuzz::number = number;
+    result.clear();
+  }
+
+  void calculate() {
+    checkFizz();
+    checkBuzz();
+    checkFuzz();
+    checkResult();
+  }
+
   void checkFizz() {
     if (0 == number % 3) {
       result += "Fizz";

@@ -37,5 +37,5 @@ TEST(fizzbuzz, ThirtyFiveReturnsBuzzFuzz) {
 }
 
 TEST(fizzbuzz, HundredOFiveReturnsFizzBuzzFuzz) {
-  EXPECT_EQ("BuzzFuzz", fizzbuzz(105));
+  EXPECT_EQ("FizzBuzzFuzz", fizzbuzz(105));
 }

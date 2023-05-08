@@ -25,4 +25,11 @@ std::string fizzbuzz(int number) {
   return checkResult(number, result);
 }
 
+class FizzBuzz {
+ public:
+  std::string operator()(int number) {
+    return fizzbuzz(number);
+  }
+};
+
 #endif

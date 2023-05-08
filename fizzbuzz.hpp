@@ -4,39 +4,41 @@
 class FizzBuzz {
  public:
   std::string operator()(int number) {
+    FizzBuzz::number = number;
     result.clear();
-    checkFizz(number);
-    checkBuzz(number);
-    checkFuzz(number);
-    checkResult(number);
+    checkFizz();
+    checkBuzz();
+    checkFuzz();
+    checkResult();
     return result;
   }
 
  private:
-  void checkFizz(int number) {
+  void checkFizz() {
     if (0 == number % 3) {
       result += "Fizz";
     }
   }
 
-  void checkBuzz(int number) {
+  void checkBuzz() {
     if (0 == number % 5) {
       result += "Buzz";
     }
   }
 
-  void checkFuzz(int number) {
+  void checkFuzz() {
     if (0 == number % 7) {
       result += "Fuzz";
     }
   }
 
-  void checkResult(int number) {
+  void checkResult() {
     if (result.empty()) {
       result = std::to_string(number);
     }
   }
 
+  int number;
   std::string result;
 };
 

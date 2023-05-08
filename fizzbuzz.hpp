@@ -4,6 +4,7 @@
 class FizzBuzz {
  public:
   std::string operator()(int number) {
+    result.clear();
     checkFizz(number);
     checkBuzz(number);
     checkFuzz(number);
